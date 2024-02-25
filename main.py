@@ -9,9 +9,8 @@ def choose_image():
     # open dialog to choose image
     file_path = filedialog.askopenfilename()
 
-    # Kiểm tra xem người dùng đã chọn một tệp ảnh hay không
+    # check if user has already selected        
     if file_path:
-        # Đọc ảnh từ tệp đã chọn
         image = cv2.imread(file_path)
         height, width, _ = image.shape
         if (height < 800 and width < 800):
@@ -30,8 +29,8 @@ def choose_image():
         face_detect(image)
 
     else:
-        print("Không có tệp nào được chọn.")
-        show_popup('Fail', 'Không có tệp nào được chọn.')
+        print("No image was selected.")
+        show_popup('Fail', 'No image was selected.')
         root.quit()
         return None
      
@@ -59,14 +58,14 @@ def face_detect(image):
         cv2.destroyAllWindows()  
 
 root = tk.Tk()
-root.withdraw()  # Ẩn cửa sổ chính
+root.withdraw() # folder pop down
 root.geometry("800x600")
 
-# Hiển thị cửa sổ pop-up thông báo
-show_popup("Cẩn thận", "Ảnh không được chưa dấu tiếng Việt")
+# pop up the warning, choose legit images
+show_popup("Warning", "Name of image contains only legit character, please don't use some special names")
 choose_image()
 
-# Hiển thị cửa sổ giao diện chính và chờ người dùng tương tác
+# main window appears and wait for the interaction of users
 root.mainloop()
 
 
