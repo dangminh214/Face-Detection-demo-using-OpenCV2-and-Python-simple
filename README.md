@@ -11,5 +11,4 @@ Ein Window wird geöffnet und da kann man ein Foto auswählen aus dem Lokal Comp
 Der ganze Code wird mit einander kombiniert, und alles wird im main.py zusammengefasst 
 Wenn der Benutzer kein Foto auswählt => mainLoop ist abgebrochen, ich habe gefixt, dass es nicht mehr fragt, welches Foto möchtet der Benutzer auswählen
 
-## Bemerkung: das geht aber noch nicht 100% fertig
 ## Zu erweitern: das Foto .resize() aber das Gesichtserkennung wird nicht verdoppelt/falsches Objekt erkennen
