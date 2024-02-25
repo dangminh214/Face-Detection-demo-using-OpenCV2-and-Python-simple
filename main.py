@@ -10,7 +10,7 @@ def choose_image():
     file_path = filedialog.askopenfilename()
 
     # check if user has already selected        
-    if file_path:
+    if cv2.imread(file_path):
         image = cv2.imread(file_path)
         height, width, _ = image.shape
         if (height < 800 and width < 800):
